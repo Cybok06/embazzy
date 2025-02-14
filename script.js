@@ -34,7 +34,7 @@ function togglePlayPause() {
         playBtn.style.display = 'block';  // Show play button
 
         // Reset background and remove blur effect
-        featuredMusic.style.backgroundImage = 'url("artist-image2.jpeg")';  // Reset to default background
+        featuredMusic.style.backgroundImage = 'url("emzy6.jpeg")';  // Reset to default background
         audioControls.classList.remove('blur');  // Remove the blur effect from the controls
 
         // Change text color to black (when paused)
@@ -51,7 +51,7 @@ pauseBtn.addEventListener('click', togglePlayPause);
 
 // JavaScript to change background when audio starts playing
 audio.addEventListener('play', function() {
-    document.querySelector('.featured-music').style.backgroundImage = "url('P CHILD.JPG')";
+    document.querySelector('.featured-music').style.backgroundImage = "url('P CHILD.jpg')";
     document.querySelector('.featured-music').classList.add('playing'); // Add 'playing' class when music starts
     textSection.style.color = 'white'; // Change text to white when playing
 });
