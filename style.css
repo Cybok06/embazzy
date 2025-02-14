@@ -1,0 +1,305 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body & General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+    background: url('emzy6.jpeg ') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.hero h2{
+border: 1px solid yellow;
+}
+
+/* Overlay to darken the background and highlight text */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    animation: fadeIn 2s ease-out; /* Adding a fade-in animation */
+}
+
+.hero-overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    animation: slideUp 1s ease-out; /* Slide-in effect */
+}
+
+.hero-overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: slideUp 1s ease-out 0.5s;
+}
+
+.hero-overlay .btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+#listen-btn {
+   border: 2px solid wheat;
+   margin-top: 10px;
+}
+
+
+.hero-overlay .btn:hover {
+    background-color: #e67e22;
+    transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+/* Animations for the Hero Section */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Featured Music Section */
+/* Featured Music Section */
+/* Featured Music Section */
+/* Featured Music Section */
+/* Featured Music Section */
+.featured-music {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f39c12;/* Default background */
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 2s ease-out;
+    transition: background-image 0.5s ease-in-out;
+    position: relative;
+    color:black; /* Default text color is black */
+    box-shadow: 0 4px 6px rgb(236, 233, 233); /* Horizontal offset, vertical offset, blur radius, color */
+}
+
+/* Custom Audio Player Panel */
+.music-player {
+    margin: 0 auto;
+    
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: #f39c12;
+}
+
+.featured-music.playing {
+    color: white; /* Text turns white when music is playing */
+}
+    .text-section {
+        transition: color 0.3s ease;
+    }
+
+
+/* Custom Play/Pause Button */
+.audio-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.audio-controls img {
+    border-radius: 20px;
+}
+
+/* Custom Button Size */
+.control-btn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+/* Beat Tracker */
+#beat-tracker {
+    width: 100%;
+    height: 5px;
+    background-color: #f39c12;
+    margin-top: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Album Info */
+.album-info h3 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.album-info a {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.album-info a:hover {
+    background-color: #e67e22;
+}
+.album-info p {
+    margin-bottom: 10px;
+}
+
+/* For Blur Effect and White Background on Audio Controls */
+
+
+/* For Blur Effect and White Background on Audio Controls */
+
+
+/* Transition for Beat Tracker Animation */
+@keyframes beat-animation {
+    0% { width: 10%; }
+    25% { width: 30%; }
+    50% { width: 50%; }
+    75% { width: 30%; }
+    100% { width: 10%; }
+}
+
+/* Tour Section */
+.tour-dates {
+    background-color:lavender;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.tour-dates h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #e67e22;
+}
+
+.events {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    background-color: #444;
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: fadeIn 2s ease-out 1s; /* Adding fade-in effect for cards */
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    background-color: #f39c12;
+}
+
+.event-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.event-card p {
+    font-size: 1.1rem;
+}
+
+/* Footer Section */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer .social-media {
+    margin-top: 20px;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+footer .social-media a:hover {
+    color: #f39c12;
+}
+.social-media {
+    display: flex;
+    gap: 10px; /* Spacing between icons */
+}
+
+.social-media a img {
+    width: 30px; /* Adjust the size of icons */
+    height: auto;
+}
+.active {
+    border: 5px solid #f39c12;
+}

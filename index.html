@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embazy Muziq</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Embazy Muziq</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Musics.html">Musics</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="mailto: embazymuziq8899@gmail.com">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Background Image -->
+    <section id="home" class="hero">
+        <div class="hero-overlay">
+            <h2>Discover the Sound of Embazy Muziq</h2>
+            <p>Listen to the latest hits, explore new music, and stay tuned for upcoming events.</p>
+            <a href="#music" class="btn">Listen Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Music Section -->
+    <section id="music" class="featured-music">
+        <h2>Current Tracks</h2>
+        <div class="music-player">
+            <audio id="audio-player">
+                <source src="problem child.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <!-- Custom Play/Pause Button -->
+            <div class="audio-controls">
+                <img id="play-btn" src="play.webp" alt="Play" class="control-btn">
+                <img id="pause-btn" src="pause.jpg" alt="Pause" class="control-btn" style="display: none;">
+            </div>
+            <!-- Beat Tracker (optional, as we had previously) -->
+            <div class="beat-tracker" id="beat-tracker"></div>
+        </div>
+        <div class="album-info">
+            <h3>Song: "Problem Child"</h3>
+            <p>Release Date: 2025 | Genre: Pop</p>
+            <a href="https://audiomack.com/embazy-5/song/problem-child" target="_blank" class="btn" id="listen-btn">Listen on Audiomack</a>
+        </div>
+    </section>
+
+    <!-- Tour Section -->
+    <section id="tour" class="tour-dates">
+        <h2>Upcoming Shows</h2>
+        <div class="events">
+            <div class="event-card active ">
+                <h3>March 12, 2025</h3>
+                <p>Accra Technical Universit,Accra (ATU)</p>
+            </div>
+            <div class="event-card">
+                <h3>No Date</h3>
+                <p>No Programme Available</p>
+            </div>
+            <div class="event-card">
+                <h3>No Date</h3>
+                <p>No Programme Available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>Contact: embazymuziq8899@gmail.com</p>
+            <div class="social-media">
+                <a href="#" target="_blank"><img src="facebook.webp" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="instagram.webp" alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="x.png" alt="X"></a>
+                <a href="#" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+                <a href="#" target="_blank"><img src="tiktok.webp" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

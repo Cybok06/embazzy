@@ -1,0 +1,174 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0c0b0b;
+    color: white;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+button {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Gallery Styling */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.small-img {
+    width: 80%;  /* Smaller images */
+    transition: transform 0.3s ease;
+}
+
+/* Scroll-triggered Animation */
+.scroll-in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slideshow transition effect */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.gallery-img {
+    animation: fadeIn 3s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+
+    .gallery-title {
+        font-size: 24px;
+    }
+}
+
+/* Lightbox Modal Styling */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    animation: zoomIn 0.5s ease-out;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Lightbox zoom effect */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Share Button Styling */
+.share-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+.share-btn:hover {
+    background-color: #45a049;
+}

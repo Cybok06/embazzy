@@ -1,0 +1,233 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    padding-top: 20px;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding box-shadow to the header */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.artist-name {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.home-btn {
+    display: inline-block;
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.home-btn:hover {
+    background-color: #e64c43;
+}
+
+/* Music Player Section */
+.music-player {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.music-player h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.player-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column; /* Default to vertical stack */
+}
+
+/* Album Art and Video Styling */
+.album-art {
+    margin-bottom: 20px;
+    text-align: center;
+    border: 3px solid #333; /* Border around the album art */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Box shadow for album art */
+}
+
+.album-art img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.track-info {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.track-info p {
+    margin: 5px 0;
+}
+
+/* Song styling */
+.song {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding box-shadow to each song container */
+}
+
+audio {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+}
+
+.song p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    /* PC version: image stays at the top, songs stacked below */
+    .player-container {
+        flex-direction: row; /* Arrange items in a row */
+        align-items: flex-start;
+    }
+
+    .album-art {
+        margin-bottom: 0;
+    }
+
+    .song {
+        margin-left: 20px; /* Add some spacing between the song elements */
+    }
+
+    .track-info {
+        font-size: 1rem;
+    }
+
+    audio {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile version: Stack the image and song titles vertically */
+    .album-art {
+        margin-bottom: 20px;
+    }
+
+    .player-container {
+        flex-direction: column; /* Stack the player and songs vertically */
+    }
+
+    audio {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Small screen adjustments */
+    .artist-name {
+        font-size: 1.2rem;
+    }
+
+    .home-btn {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    .album-art img {
+        width: 180px;
+        height: 180px;
+    }
+}
+/* Style the audio element container */
+audio {
+    width: 100%;
+    background-color:  #f39c12; /* Optional background color */
+    border-radius: 5px; /* Optional border radius for rounded corners */
+}
+
+/* Style the audio progress bar */
+audio::-webkit-media-controls-panel {
+    background-color: #f39c12; /* Set background color for the audio controls */
+    border-radius: 5px; /* Optional for rounded corners */
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-volume-slider {
+    color: #f39c12; /* Change the color of the play/pause button */
+}
+
+/* For progress bar (Chrome/Edge/Safari) */
+audio::-webkit-media-controls-volume-slider {
+    background-color: #f39c12; /* Volume slider color */
+}
+
+/* Progress bar color */
+audio::-webkit-media-controls-timeline {
+    background-color: #f39c12; /* Progress bar color */
+}
+
+/* For Firefox */
+audio::-moz-range-progress {
+    background-color: #f39c12;
+}
+
+/* For all other browsers using media controls */
+audio::-webkit-media-controls-volume-slider {
+    background-color: #f39c12;
+}
+/* Ensure the container has space for the profile image and text */
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Style for the profile image to make it round */
+.profile-img {
+    width: 50px; /* Adjust the size of the image */
+    height: 50px; /* Keep the height equal to the width for a circle */
+    border-radius: 50%; /* This makes the image round */
+    margin-right: 15px; /* Add space between the image and the name */
+}
+
+/* Style for the artist name */
+.artist-name {
+    font-size: 2rem; /* Adjust the font size as needed */
+    font-weight: bold;
+    margin: 0; /* Remove any margin */
+}
