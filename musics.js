@@ -7,14 +7,14 @@ const songsArray = [
         track: "Track 1"
     },
     {
-        name: "SOUL MATE.mp3", 
+        name: "Soul Mate.mp3", 
         image: "soulmate.PNG", 
         title: "SoulMate", 
         track: "Track 2"
     },
     {
         name: "I-DO.mp3", 
-        image: "I-DO.PNG", 
+        image: "I-Do.PNG", 
         title: "I Do", 
         track: "Track 3"
     },
@@ -23,7 +23,7 @@ const songsArray = [
    
     {
         name: "Olormachi.mp3", 
-        image: "Olormachi.PNG", 
+        image: "olormachi.PNG", 
         title: "Olormachi", 
         track: "Track 4"
     },
